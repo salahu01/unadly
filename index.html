@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unadly — the web, minus the noise</title>
+  <meta name="description" content="Unadly is a free, open-source Mac browser that blocks ads inside the engine, before they leave your Mac. Built on WebKit. No server, no tracking.">
+  <meta name="theme-color" content="#07090b">
+  <meta property="og:title" content="Unadly — the web, minus the noise">
+  <meta property="og:description" content="A free, open-source Mac browser that blocks ads before they load.">
+  <meta property="og:image" content="./icon.png">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"></div><svg class="cursor__shield" viewBox="0 0 24 24"><path d="M12 2.5c2 1.2 4.4 1.9 6.6 2a.6.6 0 0 1 .6.6v5.6c0 4.3-2.8 7.5-7.2 9.6-4.4-2.1-7.2-5.3-7.2-9.6V5.1a.6.6 0 0 1 .6-.6c2.2-.1 4.6-.8 6.6-2Z"/></svg></div>
+
+  <header class="nav">
+    <a class="nav__brand" href="#top" aria-label="Unadly, back to top">
+      <img src="./icon.svg" alt="" width="28" height="28"><span>Unadly</span>
+    </a>
+    <div class="nav__count" aria-live="polite"><span class="dot"></span><b data-blocked>0</b> ads blocked on this page</div>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#features" class="link">Features</a>
+      <a href="#how" class="link">How it works</a>
+      <a href="https://github.com/salahu01/unadly-macos" class="link">GitHub</a>
+      <a href="https://github.com/salahu01/unadly-macos/releases/latest" class="btn btn--small magnetic"><span>Download</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-label="Unadly">
+      <div class="storm" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <p class="eyebrow hero__eyebrow"><span>Free for Mac</span><span>Open source</span><span>v1.0.1</span></p>
+        <h1 class="hero__title" aria-label="Unadly">
+          <span class="hero__ads" aria-hidden="true"><span class="hero__ads-word">ADS</span><i class="strike"></i></span>
+          <span class="hero__word" aria-hidden="true">
+            <span class="ch">U</span><span class="ch">N</span><span class="ch ch--g">A</span><span class="ch ch--g">D</span><span class="ch">L</span><span class="ch">Y</span>
+          </span>
+        </h1>
+        <p class="hero__lede">The web, <em>minus the noise.</em> A Mac browser that blocks ads inside the engine, before they ever load.</p>
+        <div class="hero__cta">
+          <a href="https://github.com/salahu01/unadly-macos/releases/latest" class="btn btn--big magnetic"><span>Download for Mac</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg></a>
+          <p class="hero__hint">Move your cursor through the ads. <span>It's a shield.</span></p>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </section>
+
+    <!-- ============ VALUE ============ -->
+    <section class="value" aria-labelledby="value-title">
+      <div class="value__iris" aria-hidden="true"></div>
+      <div class="value__pin">
+        <p class="eyebrow">01 — The problem</p>
+        <h2 id="value-title" class="value__text" data-words>
+          Every page you open quietly loads things you never asked for. Banners. Trackers. Windows that open themselves.
+          Unadly stops them <em>inside the browser engine,</em> before a single byte leaves your Mac.
+        </h2>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES (horizontal) ============ -->
+    <section class="features" id="features" aria-label="Features">
+      <div class="features__head">
+        <p class="eyebrow">02 — What it does</p>
+        <h2 class="split-title">Four quiet <em>superpowers.</em></h2>
+      </div>
+      <div class="features__track">
+        <article class="feature tilt" data-feature="engine">
+          <div class="feature__stage stage-engine" aria-hidden="true">
+            <div class="lane"></div>
+            <div class="gate"><svg viewBox="0 0 24 24"><path d="M12 2.5c2 1.2 4.4 1.9 6.6 2a.6.6 0 0 1 .6.6v5.6c0 4.3-2.8 7.5-7.2 9.6-4.4-2.1-7.2-5.3-7.2-9.6V5.1a.6.6 0 0 1 .6-.6c2.2-.1 4.6-.8 6.6-2Z"/></svg></div>
+          </div>
+          <div class="feature__copy">
+            <span class="feature__num">01</span>
+            <h3>Blocked in the engine</h3>
+            <p><b class="mono" data-count="42358">42,358</b> known ad servers, compiled into WebKit's own content rules. Ad requests are stopped before they leave your Mac, on every page and frame.</p>
+          </div>
+        </article>
+
+        <article class="feature tilt" data-feature="popups">
+          <div class="feature__stage stage-popups" aria-hidden="true">
+            <div class="pop" style="--i:0"><i></i><b>YOU WON!</b><span>Claim now</span></div>
+            <div class="pop" style="--i:1"><i></i><b>Limited offer</b><span>70% off — today only</span></div>
+            <div class="pop" style="--i:2"><i></i><b>Allow notifications?</b><span>Allow · Block</span></div>
+            <div class="pop" style="--i:3"><i></i><b>Hot deals near you</b><span>Open</span></div>
+          </div>
+          <div class="feature__copy">
+            <span class="feature__num">02</span>
+            <h3>Popups, slammed shut</h3>
+            <p>A window a page tries to open by itself is dropped on the spot. Links you click still open, right where you are.</p>
+          </div>
+        </article>
+
+        <article class="feature tilt" data-feature="pins">
+          <div class="feature__stage stage-pins" aria-hidden="true">
+            <div class="pins">
+              <span class="tile"><i>W</i>wikipedia</span><span class="tile"><i>G</i>github</span><span class="tile"><i>N</i>news</span>
+              <span class="tile"><i>M</i>maps</span><span class="tile"><i>Y</i>yours</span><span class="tile tile--add"><i>+</i>add</span>
+            </div>
+            <div class="star">★</div>
+          </div>
+          <div class="feature__copy">
+            <span class="feature__num">03</span>
+            <h3>Your sites, one tap away</h3>
+            <p>Pin any site with <kbd>⌘D</kbd>. It lands on your home page with its icon, next to a search that goes straight where you mean.</p>
+          </div>
+        </article>
+
+        <article class="feature tilt" data-feature="webkit">
+          <div class="feature__stage stage-webkit" aria-hidden="true">
+            <div class="player">
+              <div class="player__frame"><div class="player__glow"></div><span class="player__play">▶</span></div>
+              <div class="player__bar"><i></i></div>
+            </div>
+          </div>
+          <div class="feature__copy">
+            <span class="feature__num">04</span>
+            <h3>Safari's engine underneath</h3>
+            <p>Built on Apple's WebKit, so video, logins and downloads work the way they do in Safari. Just quieter.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SHOWCASE ============ -->
+    <section class="showcase" aria-labelledby="showcase-title">
+      <div class="showcase__pin">
+        <h2 id="showcase-title" class="showcase__title"><span>Meet</span> <em>the calm</em> <span>web.</span></h2>
+        <div class="window">
+          <div class="window__bar"><i></i><i></i><i></i><span>Unadly</span></div>
+          <img src="./app-home.png" alt="Unadly's home page: the Unadly logo, a search field and pinned sites" width="2400" height="1600">
+        </div>
+      </div>
+    </section>
+
+    <section class="compare" aria-labelledby="compare-title">
+      <div class="compare__head">
+        <p class="eyebrow">03 — Same page, two browsers</p>
+        <h2 id="compare-title" class="split-title">Drag the line. <em>Watch the noise go.</em></h2>
+      </div>
+      <div class="compare__stage" data-compare>
+        <div class="page page--noisy" aria-hidden="true">
+          <div class="ad ad--top">⚡ MEGA SALE — 70% OFF EVERYTHING ⚡</div>
+          <div class="page__body">
+            <article class="article">
+              <h4>How to slow down on the internet</h4>
+              <p class="by">A long read · 8 min</p>
+              <div class="ad ad--inline">SPONSORED · You won't believe #7</div>
+              <p>Most of what a page loads isn't the page. It's the machinery around it: scripts that measure, banners that shout, windows that open on their own.</p>
+              <p>Take that away and something odd happens. The words get louder. You read to the end.</p>
+              <div class="ad ad--inline ad--y">🎰 SPIN TO WIN 🎰</div>
+              <p>The quiet web was always there. It was just buried.</p>
+            </article>
+            <aside class="rail"><div class="ad ad--tall">BUY<br>NOW</div><div class="ad ad--sq">Earn $$$ from home</div></aside>
+          </div>
+          <div class="ad ad--pop">🔔 Allow notifications? <span>Allow</span></div>
+          <div class="ad ad--cookie">We value your privacy* <span>Accept all</span></div>
+        </div>
+        <div class="page page--clean" aria-hidden="true">
+          <div class="page__body">
+            <article class="article">
+              <h4>How to slow down on the internet</h4>
+              <p class="by">A long read · 8 min</p>
+              <p>Most of what a page loads isn't the page. It's the machinery around it: scripts that measure, banners that shout, windows that open on their own.</p>
+              <p>Take that away and something odd happens. The words get louder. You read to the end.</p>
+              <p>The quiet web was always there. It was just buried.</p>
+            </article>
+          </div>
+        </div>
+        <div class="compare__handle" role="slider" tabindex="0" aria-label="Compare a page with and without ads" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span>‹ ›</span></div>
+        <span class="compare__label compare__label--l">Any browser</span>
+        <span class="compare__label compare__label--r">Unadly</span>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process" id="how" aria-labelledby="how-title">
+      <div class="process__head">
+        <p class="eyebrow">04 — How it works</p>
+        <h2 id="how-title" class="split-title">How an ad <em>dies.</em></h2>
+      </div>
+      <div class="process__map">
+        <svg class="process__path" viewBox="0 0 1000 1600" preserveAspectRatio="none" aria-hidden="true">
+          <path class="track" d="M500 0 C 500 160, 180 200, 180 380 S 820 560, 820 780 S 180 980, 180 1180 S 500 1420, 500 1600"/>
+          <path class="draw" d="M500 0 C 500 160, 180 200, 180 380 S 820 560, 820 780 S 180 980, 180 1180 S 500 1420, 500 1600"/>
+        </svg>
+        <div class="packet" aria-hidden="true"><span>ads.example.net/banner.js</span></div>
+        <ol class="steps">
+          <li class="step step--l"><span class="step__n">01</span><h3>A page asks</h3><p>The site requests a script from an ad server, like it does on almost every page.</p></li>
+          <li class="step step--r"><span class="step__n">02</span><h3>WebKit checks</h3><p>The request meets Unadly's rule list: 42,358 ad servers, compiled once and cached by the engine.</p></li>
+          <li class="step step--l"><span class="step__n">03</span><h3>It never leaves</h3><p>A match is blocked inside the engine. No connection, no download, no tracking pixel.</p></li>
+          <li class="step step--r"><span class="step__n">04</span><h3>The page draws clean</h3><p>Empty ad slots are hidden too, so what's left is what you came for.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROOF ============ -->
+    <section class="proof" aria-labelledby="proof-title">
+      <h2 id="proof-title" class="visually-hidden">Unadly in numbers</h2>
+      <div class="stats">
+        <div class="stat"><b data-count="42358">0</b><span>ad servers blocked</span></div>
+        <div class="stat"><b data-count="0">0</b><span>Unadly servers in the middle</span></div>
+        <div class="stat"><b data-count="0">0</b><span>trackers, analytics or accounts</span></div>
+        <div class="stat"><b data-count="1.3" data-suffix=" MB" data-decimals="1">0</b><span>to download</span></div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__row">
+          <span>Open source</span><i>✦</i><span>Apache-2.0</span><i>✦</i><span>Built on WebKit</span><i>✦</i><span>macOS 14+</span><i>✦</i><span>Apple silicon &amp; Intel</span><i>✦</i><span>No account</span><i>✦</i>
+          <span>Open source</span><i>✦</i><span>Apache-2.0</span><i>✦</i><span>Built on WebKit</span><i>✦</i><span>macOS 14+</span><i>✦</i><span>Apple silicon &amp; Intel</span><i>✦</i><span>No account</span><i>✦</i>
+        </div>
+      </div>
+      <p class="proof__note">Every line of Unadly is <a href="https://github.com/salahu01/unadly-macos" class="link">on GitHub</a>. Read it, build it, change it.</p>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="finale" aria-labelledby="finale-title">
+      <div class="finale__icon tilt-icon"><img src="./icon.svg" alt="" width="220" height="220"></div>
+      <h2 id="finale-title" class="finale__title">
+        <span class="row"><span>Browse</span></span>
+        <span class="row"><em>in peace.</em></span>
+      </h2>
+      <div class="finale__cta">
+        <a href="https://github.com/salahu01/unadly-macos/releases/latest" class="btn btn--big magnetic"><span>Download Unadly</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0 5-5m-5 5-5-5M5 20h14"/></svg></a>
+        <a href="https://github.com/salahu01/unadly-macos" class="btn btn--ghost magnetic"><span>Star on GitHub</span></a>
+      </div>
+      <p class="finale__small">Free · macOS 14 Sonoma or later · First launch: right-click Unadly → Open</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 salahu01 (Swalahu) · Apache-2.0</span>
+    <span>Ad list by <a href="https://github.com/anudeepND/blacklist" class="link">anudeepND</a> (MIT)</span>
+    <a href="https://github.com/salahu01/unadly-macos/issues" class="link">Report an ad that got through</a>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
